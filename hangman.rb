@@ -1,5 +1,3 @@
-# system('cls') won't work
-
 def draw_man(part_nu)
   if part_nu == 0
     puts " ____\n|    |\n|\n|\n|\n|\n|_______"
