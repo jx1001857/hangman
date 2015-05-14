@@ -71,15 +71,19 @@ word_array = word.split('')
 
 puts "Word:" + (" _" * word_array.count)
 
+letters_array = ("a".."z").to_a
+
 while 1 == 1
   puts "Guess?"
   letter1 = gets.chomp
-  if !word_array.include?(letter1)
-    bad_guesses = bad_guesses + 1
-  end
   if letter.include?(letter1)
     puts 'You already guessed this letter.'
+  elsif !letters_array.include?(letter1)
+    puts "This is not a valid guess."
   else
+    if !word_array.include?(letter1)
+      bad_guesses = bad_guesses + 1
+    end
     letter.push(letter1)
     display_guess_process(word, letter, bad_guesses)
   end
